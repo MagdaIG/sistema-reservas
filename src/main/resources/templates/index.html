@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sistema de Reservas - Sabor Gourmet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://www.peru.travel/Contenido/General/Imagen/es/1049/1.1/restaurantes-de-lujo-desktop.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            height: 100vh;
+        }
+        h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .btn {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px; /* Ajusta el ancho de los botones */
+        }
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaciado entre los botones */
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+        <a class="navbar-brand" href="/">Sabor Gourmet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservas/listar">Reservas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/clientes/nuevo">Crear Cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mesas/nueva">Crear Mesa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservas/nueva">Nueva Reserva</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contenedor Principal -->
+<div class="text-center">
+    <h1 class="mb-4">Sistema de Reservas</h1>
+    <div class="btn-container">
+        <a href="/reservas/nueva" class="btn btn-primary btn-lg">Nueva Reserva</a>
+        <a href="/clientes/nuevo" class="btn btn-success btn-lg">Crear Nuevo Cliente</a>
+        <a href="/mesas/nueva" class="btn btn-warning btn-lg">Crear Nueva Mesa</a>
+        <a href="/reservas/listar" class="btn btn-info btn-lg">Ver Reservas</a>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
